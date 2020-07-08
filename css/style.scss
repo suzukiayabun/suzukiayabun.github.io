@@ -1,0 +1,711 @@
+$blue : #112d93;
+
+$blue2 : #011d85;
+
+$gray: #454545;
+
+$orange: #e76d1c;
+
+$lightgray: #f9f9f9;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Open Sans' , sans-serif;
+    font-size: 18px;
+    color: #454545;
+
+    a{
+       color: #454545;
+       text-decoration: underline;
+       
+       &:hover{
+           color: #777676;
+       }
+    }
+}
+
+p{
+    line-height: 1.8em;
+    letter-spacing: 0.05em;
+}
+
+
+/* ----------- header ----------- */
+
+header {
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color : #fff;
+    text-align: center;
+    position: relative;
+    
+}
+
+.header_logo{
+
+    text-align: center;
+
+    .title{
+        font-family: 'Archivo Narrow';
+        font-size: 48px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        opacity: 1;
+        color: $blue;
+    }
+
+    .text {
+        font-family: 'Open Sans';
+        font-size: 21px;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        opacity: 0.8;
+        color: $blue;
+    }
+}
+
+.language {
+    margin-top: -10px;
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+    margin: 0;
+
+    li{
+        display: inline-block;
+        margin-left: -10px;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 10px;
+        color: #fff;
+        background-color: #011d85;
+        font-family: ヒラギノ角ゴ Pro;
+        letter-spacing: 0.3em;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    .twitter{
+
+        box-sizing: border-box;
+
+        a{
+            background-color: #fff;
+            color: #011d85;
+            font-size: 18px;
+        }
+
+    }
+
+
+    
+}
+
+.header {
+    background: #fff;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  }
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 0;
+    display: flex;
+    color: $blue;
+    height: 72px;
+}
+
+
+
+.logo {
+    font-family: 'Archivo Narrow';
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    line-height: 1.6em;
+    text-align: center;
+    margin-right: auto;
+    margin-left: 150px;
+
+    a{
+        color: $blue;
+        text-decoration: none;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+}
+
+#nav {
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+    font-family: Lato;
+    letter-spacing: 0.1em;
+    margin-top: 15px;
+    margin-right: 150px;
+
+
+    li{
+        padding-left: 43px;
+
+        a{
+            text-decoration: none;
+            color: $blue;
+            
+            
+            &:hover{
+             background-color: #ececec;
+             transition: 0.8s;
+            }
+        }
+
+        ul{
+
+            li{
+                display: none;
+            }
+            
+        }
+    }
+}
+
+
+/* ----------- cover ----------- */
+
+.cover {
+    width:100%;
+    height:500px;
+    background: #cfcfcf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/cover2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 25px;
+
+}
+
+.inner {
+    width: 100%;
+    height: 324px;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.covertitle {
+
+    width: 960px;
+    color: #fff;
+    margin: auto 0;
+
+
+
+
+    .title{
+        font-family: 'Archivo Narrow';
+        font-size: 3em;
+        font-weight: 200;
+        letter-spacing: 0.15em;
+        opacity: 1;
+    }
+
+    .text {
+        font-family: 'Open Sans';
+        font-size: 1em;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        opacity: 1;
+    }
+}
+
+/* ----------- main ----------- */
+
+main {
+    padding-top: 0px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#bread{
+
+    background-color: #fff;
+    width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    color: #707070;
+
+    .breadcrumbs{
+        padding-left: 10px;
+        list-style: none;
+        font-size: 14px;
+        padding-top: 20px;
+        
+
+        li{
+            display: inline-block;
+
+            a{
+                color: #40a3c8;
+                text-decoration: none;
+
+                &:hover{
+                    
+                    text-decoration: underline;
+
+                }
+            }
+
+            &::after{
+                font-family: "Font Awesome 5 Free";
+                content: '\f0da';
+                display: inline-block;
+                font-weight: 900;
+                padding: 0 5px; /*左右に余白*/
+                color: #40a3c8; 
+            }
+        }
+    }
+
+  
+    .breadcrumbs li:last-child::after{
+    display: none;
+    }
+}
+
+/* ----------- bio ----------- */
+
+#bio{
+    margin-top: -200px;
+    padding-top: 200px;
+}
+
+.bio{
+    margin-top: 80px; 
+    width: 100%;
+}
+
+.content{
+    width: 940px;
+    height: auto;
+    margin: 0 auto;
+
+    .text {
+        font-family: 'Open Sans';
+        font-size: 21px;
+        font-style: italic;
+        letter-spacing: 0.1em;
+        opacity: 0.8;
+        color: $blue;
+    }
+
+    h1{
+        padding-top: 0px;
+        color: $orange;
+        font-weight: 200;
+    }
+
+    h2{
+        font-size: 21px;
+        color: $blue;
+        padding-top: 60px;
+        padding-bottom: 30px;
+    }
+
+}
+
+.col {
+    display: flex;
+}
+
+.picture {
+    width: 456px;
+    height: 340px;
+    background-color: gray;
+    background-size: cover;
+    background-image: url('../img/samejima2.png');
+}
+
+.information{
+    padding-left: 25px;
+
+    h3{
+        font-size: 25px;
+        color: $blue;
+        font-weight: 400;
+        margin-top: -7px;
+    }
+
+    h4{
+        font-size: 18px;
+        color: $blue;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+
+    p{
+        font-size: 18px;
+        padding-top: 29px;
+    }
+
+
+    h5{
+        padding-top: 30px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    a{
+        color: $gray;
+    }
+
+}
+
+.bio2{
+    width: 100%;
+    padding: 80px 0;
+    background-color: rgba(255, 255, 255, 0.973);
+
+    h5{
+        padding-top: 30px;
+        font-size: 18px;
+        font-weight: 400;
+
+        a{
+            color: $gray;
+            text-decoration: underline;
+
+            &:hover{
+                color: #777676;
+            }
+        }
+    }
+}
+
+span{
+    font-size: 36px;
+    color: $orange;
+    font-weight: 200;
+    display: block;
+    padding-bottom: 30px;
+}
+
+/* ----------- research ----------- */
+
+#research{
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+.research{
+    width: 100%;
+    height: auto;
+    background-color: $lightgray;
+    background-image: url("../img/research.jpg"),
+                      url("../img/research2.jpg");
+    background-position: top right, bottom left;
+    background-repeat: no-repeat;
+    padding-bottom: 120px;
+    margin-top: 100px;
+
+}
+
+/* ----------- current project ----------- */
+
+.current {
+    padding: 120px 0;
+}
+
+/* ----------- publication ----------- */
+
+#publication2{
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+.publication{
+    width: 100%;
+    background-color: $lightgray;
+    background-image: url("../img/publication.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding-bottom: 120px;
+    margin-top: 100px;
+}
+
+.publication_h1{
+    margin-bottom: 60px;
+}
+
+.list {
+    margin-bottom: 30px;
+    width: 100%;
+    background-color: #fff;
+
+    a{
+        text-decoration: none;
+    }
+
+    .publication_title{
+        font-size: 21px;
+        font-weight: 400;
+        padding: 10px;
+        
+    }
+
+    h6{
+        font-size: 18px;
+        font-weight: 400;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+/* ----------- people ----------- */
+
+#people{
+    margin-top: -100px;
+    padding-top: 100px;
+}
+
+.people{
+    width: 100%;
+    padding-bottom: 220px;
+    margin-top: 100px;
+}
+
+.people_box{
+    padding-top: 70px;
+    display: inline-block;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.sameicon{
+    width:200px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(../img/sameicon.png);
+    background-size: cover;
+}
+
+.kumaicon{
+    width:200px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url();
+    background-size: cover;
+    background-color: #777676;
+}
+
+.ayaicon{
+    width:200px;
+    height: 200px;
+    border-radius: 10px;
+    background-image: url(../img/suzuicon.png);
+    background-size: cover;
+}
+
+.ppl{
+    color: $blue;
+    font-size: 18px;
+    padding-top: 15px;
+    margin: 0;
+}
+
+.posi{
+    color: $blue;
+    font-size: 15px;
+    font-weight: 200;
+    padding-top: 3px;
+    margin: 0;
+}
+
+/* ----------- news ----------- */
+
+#news{
+    margin-top: -120px;
+    padding-top: 120px;
+}
+
+.news{
+    width: 100%;
+    padding-bottom: 150px;
+    background: #f7f7f7;
+}
+
+.newstitle{
+    padding-bottom: 60px;
+}
+/* ----------- get ----------- */
+
+#get{
+    margin-top: -215px;
+    padding-top: 215px;
+}
+
+.get{
+
+    width: 100%;
+    background-image: url(../img/get_involved.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 63px 0;
+
+    .content_getinvolved{
+        width: 960px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 0 auto;
+        padding: 58px;
+        padding-bottom: 100px;
+    }
+
+    h1{
+        color: $orange;
+        font-weight: 200;
+    }
+
+    p{
+        padding-top: 40px;
+    }
+
+
+}
+
+
+/* ----------- contact ----------- */
+
+#contact{
+    margin-top: -95px;
+    padding-top: 95px;
+}
+
+.contact{
+    width: 100%;
+    margin-top: 95px;
+}
+
+.contact_wrapper{
+    display: flex;
+    padding-top: 45px;
+}
+
+.form{
+    width: 50%;
+    padding-right: 100px;
+
+    p{
+        
+    }
+}
+
+.contactinfo{
+    width: 50%;
+}
+
+.contacttitle{
+    color: $blue;
+    font-weight: bold;
+}
+
+.contactdescription{
+    padding-bottom: 59px;
+}
+
+label{
+    font-size: 16px;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #636363;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #707070;
+  }
+  
+  .container {
+
+    padding-top: 30px;
+  }
+
+  iframe{
+      padding-top: 100px;
+  }
+
+
+/* ----------- footer ----------- */
+
+footer {
+    background-color: $blue;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+
+    p{
+        display: inline;
+    }
+
+    a{
+        color: #fff;
+        text-decoration: none;
+
+        &:hover{
+            color: #fff
+        }
+    }
+
+}
+
+.tamagawa_link{
+    margin-top: 5px;
+}
