@@ -130,7 +130,7 @@ nav {
   line-height: 1.6em;
   text-align: center;
   margin-right: auto;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 
 .logo a {
@@ -151,7 +151,7 @@ nav {
   font-family: Lato;
   letter-spacing: 0.1em;
   margin-top: 15px;
-  margin-right: 150px;
+  margin-right: 50px;
 }
 
 #nav li {
@@ -322,6 +322,7 @@ main {
 }
 
 .col {
+  padding-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -403,7 +404,6 @@ span {
   padding-top: 100px;
 }
 
-
 .research {
   width: 100%;
   height: auto;
@@ -413,11 +413,10 @@ span {
   background-repeat: no-repeat;
   padding-bottom: 120px;
   margin-top: 100px;
-
 }
 
 .topic {
-    padding-top: 15px;
+  margin-top: 60px;
 }
 
 /* ----------- current project ----------- */
@@ -479,24 +478,32 @@ span {
   margin-top: 100px;
 }
 
+.section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .people_box {
   padding-top: 70px;
-  display: inline-block;
   padding-right: 20px;
   text-align: center;
 }
 
 .sameicon {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   background-image: url(../img/sameicon.png);
   background-size: cover;
 }
 
 .kumaicon {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   background-image: url();
   background-size: cover;
@@ -504,8 +511,8 @@ span {
 }
 
 .ayaicon {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border-radius: 10px;
   background-image: url(../img/suzuicon.jpg);
   background-size: cover;
