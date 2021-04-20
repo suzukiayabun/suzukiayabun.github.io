@@ -47,6 +47,10 @@ header {
     
 }
 
+.headerColor-default{
+    background-color: $blue;
+}
+
 .header_logo{
 
     text-align: center;
@@ -73,9 +77,11 @@ header {
 .language {
     margin-top: -10px;
     width: 100%;
+    height: 29px;
     text-align: right;
     font-size: 12px;
     margin: 0;
+    background-color: #f1f1f1;
 
     li{
         display: inline-block;
@@ -85,7 +91,7 @@ header {
     a {
         text-decoration: none;
         padding: 10px;
-        color: #fff;
+        color: #f1f1f1;
         background-color: #011d85;
         font-family: ヒラギノ角ゴ Pro;
         letter-spacing: 0.3em;
@@ -100,7 +106,7 @@ header {
         box-sizing: border-box;
 
         a{
-            background-color: #fff;
+            background-color: #f1f1f1;
             color: #011d85;
             font-size: 18px;
         }
@@ -135,6 +141,10 @@ nav {
     display: flex;
     color: $blue;
     height: 72px;
+
+    @media screen and (max-width:700px){
+        padding-top: 10px;
+    }
 }
 
 
@@ -147,7 +157,12 @@ nav {
     line-height: 1.6em;
     text-align: center;
     margin-right: auto;
-    margin-left: 150px;
+    margin-left: 50px;
+
+    @media screen and (max-width:950px){
+        margin-left: 10px;
+        margin-top: 2px;
+    }
 
     a{
         color: $blue;
@@ -166,11 +181,27 @@ nav {
     font-family: Lato;
     letter-spacing: 0.1em;
     margin-top: 15px;
-    margin-right: 150px;
+    margin-right: 50px;
+
+    @media screen and (max-width:950px){
+        margin-right: 10px;
+    }
+
+    @media screen and (max-width:910px){
+        font-size: 12px;
+    }
+
+    @media screen and (max-width:700px){
+        display: none;
+    }
 
 
     li{
         padding-left: 43px;
+
+        @media screen and (max-width:910px){
+            padding-left: 20px;
+        }
 
         a{
             text-decoration: none;
@@ -178,7 +209,7 @@ nav {
             
             
             &:hover{
-             background-color: #ececec;
+             color: #c7c7c7;
              transition: 0.8s;
             }
         }
@@ -193,6 +224,48 @@ nav {
     }
 }
 
+/* ----------- spnavi -----------*/
+
+.sp_navi{
+    @media screen and (min-width:700px){
+        display: none;
+    }
+
+    padding-right: 20px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.sp_navi_li{
+    width: 100%;
+    position: absolute;
+    top:50px;
+    right:0%;
+    border: 1px solid #eee;
+    background: white;
+    margin: 0;
+    padding:0;
+    display:none;
+    z-index: 100; //追記
+  
+    li{
+  
+      list-style: none;
+      margin: 0;
+      padding:0;
+  
+      a{
+        display: block;
+        padding: 30px 8px;
+        border-bottom: 1px solid #eee;
+        font-size: 14px;
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+  }
+
+
 
 /* ----------- cover ----------- */
 
@@ -203,11 +276,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/cover2.jpg);
+    background-image: url(../img/cover.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin-top: 25px;
+
+    @media screen and (max-width:700px){
+        margin-top: -5px;
+        height: 82vh;
+    }
 
 }
 
@@ -236,6 +314,10 @@ nav {
         font-weight: 200;
         letter-spacing: 0.15em;
         opacity: 1;
+
+        @media screen and (max-width:401px){
+            line-height: 1em;
+        }
     }
 
     .text {
@@ -244,6 +326,10 @@ nav {
         font-style: italic;
         letter-spacing: 0.1em;
         opacity: 1;
+
+        @media screen and (max-width:401px){
+            padding-top: 20px;
+        }
     }
 }
 
@@ -256,68 +342,33 @@ main {
     margin: 0 auto;
 }
 
-#bread{
-
-    background-color: #fff;
-    width: 960px;
-    padding: 0;
-    margin: 0 auto;
-    color: #707070;
-
-    .breadcrumbs{
-        padding-left: 10px;
-        list-style: none;
-        font-size: 14px;
-        padding-top: 20px;
-        
-
-        li{
-            display: inline-block;
-
-            a{
-                color: #40a3c8;
-                text-decoration: none;
-
-                &:hover{
-                    
-                    text-decoration: underline;
-
-                }
-            }
-
-            &::after{
-                font-family: "Font Awesome 5 Free";
-                content: '\f0da';
-                display: inline-block;
-                font-weight: 900;
-                padding: 0 5px; /*左右に余白*/
-                color: #40a3c8; 
-            }
-        }
-    }
-
-  
-    .breadcrumbs li:last-child::after{
-    display: none;
-    }
-}
-
 /* ----------- bio ----------- */
 
 #bio{
-    margin-top: -200px;
-    padding-top: 200px;
+    margin-top: -150px;
+    padding-top: 150px;
+
+    @media screen and (max-width:700px){
+        margin-top: -90px;
+        padding-top: 90px;
+    }
 }
 
 .bio{
     margin-top: 80px; 
     width: 100%;
+    background-color: #f0f0f0;
 }
 
 .content{
-    width: 940px;
+    max-width: 940px;
     height: auto;
     margin: 0 auto;
+
+    @media screen and (max-width:700px){
+        margin: 0 10px;
+    }
+
 
     .text {
         font-family: 'Open Sans';
@@ -344,19 +395,53 @@ main {
 }
 
 .col {
+    padding-top: 15px;
     display: flex;
+    flex-direction: row;
+
+    @media (max-width:500px){
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }
 
 .picture {
-    width: 456px;
-    height: 340px;
+    width: 430px;
+    height: 320px;
     background-color: gray;
     background-size: cover;
-    background-image: url('../img/samejima2.png');
+    background-image: url('../img/sameicon7.png');
+
+    @media screen and (max-width:835px){
+        width: 400px;
+        height: 350px;
+    }
+
+    @media screen and (max-width:712px){
+        width: 300px;
+        height: 250px;
+    }
+
+    @media screen and (max-width:629px){
+        width:100%;
+
+    }
+
+    @media screen and (max-width:500px){
+        height: 300px;
+    }
+
+
 }
 
 .information{
-    padding-left: 25px;
+    padding-left: 40px;
+
+    @media (max-width:500px){
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 40px;
+    }
 
     h3{
         font-size: 25px;
@@ -392,8 +477,9 @@ main {
 
 .bio2{
     width: 100%;
-    padding: 80px 0;
-    background-color: rgba(255, 255, 255, 0.973);
+    padding: 80px 10px;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
 
     h5{
         padding-top: 30px;
@@ -422,21 +508,52 @@ span{
 /* ----------- research ----------- */
 
 #research{
-    margin-top: -100px;
-    padding-top: 100px;
+    margin-top: -150px;
+    padding-top: 150px;
+
+    @media screen and (max-width:700px){
+        margin-top: -80px;
+        padding-top: 80px;
+    }
+
 }
 
-.research{
+.research_interest{
     width: 100%;
     height: auto;
     background-color: $lightgray;
-    background-image: url("../img/research.jpg"),
-                      url("../img/research2.jpg");
-    background-position: top right, bottom left;
+    background-image: url("../img/research.jpg");
+    background-position: top right;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+    padding-bottom: 100px;
+
+    @media screen and (max-width:700px){
+        background-image: url(../img/research_sp.jpg);
+    }
+
+}
+
+.research_topics{
+    width: 100%;
+    height: auto;
+    background-color: #efefef;
+    background-image: url("../img/research2.jpg");
+    background-position: bottom left;
     background-repeat: no-repeat;
     padding-bottom: 120px;
-    margin-top: 100px;
 
+    @media screen and (max-width:700px){
+        background-image: url(../img/research2_sp.jpg); 
+    }
+
+}
+
+.topic{
+    padding-top: 60px;
+    color: $orange;
+    font-weight: 200;
+    font-size: 36px;
 }
 
 /* ----------- current project ----------- */
@@ -448,8 +565,13 @@ span{
 /* ----------- publication ----------- */
 
 #publication2{
-    margin-top: -100px;
-    padding-top: 100px;
+    margin-top: -150px;
+    padding-top: 150px;
+
+    @media screen and (max-width:700px){
+        margin-top: -80px;
+        padding-top: 80px;
+    }
 }
 
 .publication{
@@ -496,45 +618,64 @@ span{
 /* ----------- people ----------- */
 
 #people{
-    margin-top: -100px;
-    padding-top: 100px;
+    margin-top: -130px;
+    padding-top: 130px;
+
+    @media screen and (max-width:700px){
+        margin-top: -80px;
+        padding-top: 80px;
+    }
 }
 
 .people{
     width: 100%;
     padding-bottom: 220px;
-    margin-top: 100px;
+    margin-top: 100px;       
+    }
+
+
+.section{
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width:780px){
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .people_box{
     padding-top: 70px;
-    display: inline-block;
     padding-right: 20px;
     text-align: center;
+
+    @media screen and (max-width:780px){
+        flex-wrap: wrap;
+    }
 }
 
 .sameicon{
-    width:200px;
-    height: 200px;
-    border-radius: 10px;
+    width:220px;
+    height: 220px;
+    border-radius: 20px;
     background-image: url(../img/sameicon.png);
     background-size: cover;
 }
 
 .kumaicon{
-    width:200px;
-    height: 200px;
-    border-radius: 10px;
+    width:220px;
+    height: 220px;
+    border-radius: 20px;
     background-image: url();
     background-size: cover;
-    background-color: #777676;
+    background-color: #bbbbbb;
 }
 
 .ayaicon{
-    width:200px;
-    height: 200px;
-    border-radius: 10px;
-    background-image: url(../img/suzuicon.png);
+    width:220px;
+    height: 220px;
+    border-radius: 20px;
+    background-image: url(../img/suzuicon.jpg);
     background-size: cover;
 }
 
@@ -556,8 +697,13 @@ span{
 /* ----------- news ----------- */
 
 #news{
-    margin-top: -120px;
-    padding-top: 120px;
+    margin-top: -150px;
+    padding-top: 150px;
+
+    @media screen and (max-width:700px){
+        margin-top: -80px;
+        padding-top: 80px;
+    }
 }
 
 .news{
@@ -566,14 +712,67 @@ span{
     background: #f7f7f7;
 }
 
+.news_box{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    justify-content: flex-end;
+
+    @media screen and (max-width:640px){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.news_img{
+    width: 180px;
+    height: 180px;
+    background-color: #bbbbbb;
+
+    @media screen and (max-width:953px){
+        width: 100px;
+        height: 100px;
+    }
+
+    @media screen and (max-width:640px){
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.news_info{
+    width: 80%;
+    padding-left: 20px;
+
+    @media screen and (max-width:550px){
+        padding-left:0;
+    }
+}
+
 .newstitle{
     padding-bottom: 60px;
 }
+
+.news_title{
+    color: $blue;
+    font-weight: bold;
+}
+
+.news_description{
+    margin-top: 10px;
+}
+
 /* ----------- get ----------- */
 
 #get{
-    margin-top: -215px;
-    padding-top: 215px;
+    margin-top: -260px;
+    padding-top: 260px;
+
+    @media screen and (max-width:700px){
+        margin-top: -190px;
+        padding-top: 190px;
+    }
 }
 
 .get{
@@ -588,13 +787,18 @@ span{
         width: 960px;
         background-color: rgba(255, 255, 255, 0.5);
         margin: 0 auto;
-        padding: 58px;
-        padding-bottom: 100px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+
+        @media screen and (max-width:1024px){
+            width: 90vw;
+        }
     }
 
     h1{
         color: $orange;
         font-weight: 200;
+        margin-top: -50px;
     }
 
     p{
@@ -608,8 +812,13 @@ span{
 /* ----------- contact ----------- */
 
 #contact{
-    margin-top: -95px;
-    padding-top: 95px;
+    margin-top: -130px;
+    padding-top: 130px;
+
+    @media screen and (max-width:700px){
+        margin-top: -80px;
+        padding-top: 80px;
+    }
 }
 
 .contact{
@@ -620,19 +829,29 @@ span{
 .contact_wrapper{
     display: flex;
     padding-top: 45px;
+
+    @media screen and (max-width:780px){
+        flex-wrap: wrap;
+    }
 }
 
 .form{
     width: 50%;
     padding-right: 100px;
 
-    p{
-        
+    @media screen and (max-width:780px){
+        width: 100vw;
+        padding-right: 0;
     }
 }
 
 .contactinfo{
     width: 50%;
+
+    @media screen and (max-width:780px){
+        width: 100vw;
+        padding-top: 60px;
+    }
 }
 
 .contacttitle{
@@ -690,10 +909,16 @@ footer {
     display: flex;
     padding: 30px;
     box-sizing: border-box;
+    font-size: 16px;
 
-    p{
-        display: inline;
+    @media screen and (max-width:400px){
+        font-size: 14px;
+
+        img{
+            width: 50px;
+        }
     }
+
 
     a{
         color: #fff;
@@ -707,5 +932,11 @@ footer {
 }
 
 .tamagawa_link{
-    margin-top: 5px;
+    margin-top: 8px;
+    margin-left: 5px;
+
+    @media screen and (max-width:400px){
+        margin-top: 0px;
+        margin-left: 5px;
+    }
 }
